@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="modernizr.custom.57231.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        Modernizr.load({
+            test: Modernizr.inputtypes.date,
+            nope: ['http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/base/jquery.ui.all.css'],
+            complete: function () {
+                $('input[type=date]').datepicker({
+                    dateFormat: 'yy-mm-dd'
+                });
+            }
+        });
+     </script>
+
+    
+</head>
+<body>
+   <h1>Run this page in IE 9 or 10.</h1>
+    Note that a connection to the internet is required for this page to work properly.
+
+   <p>enter a date:<input type="date" name="dte" /></p>
+    
+
+<!-- 
+    *References*
+    Modernizr:https://modernizr.com/
+    PolyFill:https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
+--> 
+    
+</body>
+</html>

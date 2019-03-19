@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en-au">
+<body>
+
+<form action="/GenericForm.aspx" method="post">
+
+  Enter a date before 01-01-1980:
+  <input type="date" name="bday1" max="1979-12-31" required="required"><br />
+
+  Enter a date after 01-01-2000:
+  <input type="date" name="bday2" min="1999-12-31"  required="required"><br />
+
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5"  required="required" /><br />
+
+  <input type="submit" />
+  
+</form>
+
+</body>
+</html>

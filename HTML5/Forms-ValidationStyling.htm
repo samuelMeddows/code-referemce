@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <style>
+        input {
+            border:solid 5px;
+        }
+        input:invalid {
+            border-color:red;
+        }
+         input:valid {
+            border-color:green;
+        }
+        input[type="submit"] {
+            border-color: black;
+            border: solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+<form action="/GenericForm.aspx" method="post">
+  First name:<input type="text" name="fname" required="required" /><br />
+  Last name: <input type="text" name="lname" required="required" /><br />
+  E-mail: <input type="email" name="email"  required="required" title="please use an standard format" pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"><br />
+  <input type="submit" />
+</form>
+</body>
+</html>

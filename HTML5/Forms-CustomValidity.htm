@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <script  type="text/javascript" src="../../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#frm").submit(function () {
+                if ($("#email")[0].value.indexOf("eee") > -1) {
+                    alert("sorry you can't have an email with 3 consecutive 'e's in it");
+                    return false;
+                }
+            });
+        });
+
+        function fnameOnInput() {
+                if ($("#fname")[0].value.indexOf("x") > -1) 
+                    $("#fname")[0].setCustomValidity("sorry you can't have an 'x' in your first name");
+                else
+                    $("#fname")[0].setCustomValidity("");
+        }
+        </script>
+  
+</head>
+
+<body>
+    <form id="frm" action="/GenericForm.aspx" method="post">
+        In this example, First name must not contain an &#39;x&#39; and the email must not have 3 consecutive &#39;e&#39;s.<br />
+        <br />
+        <br />
+        <br />
+        First name:<input id="fname" type="text" name="fname" required="required" oninput="return fnameOnInput();" /><br />
+        Last name: <input type="text" name="lname" required="required" /><br />
+        E-mail: <input type="email" id="email" name="email" required="required" title="please use an standard format" pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"><br />
+        <input type="submit" />
+    </form>
+</body>
+</html>
