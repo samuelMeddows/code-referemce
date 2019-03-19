@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+        function Button1_onclick() {
+            let person = {};
+            person.first=Text1.value;
+            person.last=Text2.value;
+
+            let json = JSON.stringify(person);
+
+            results.innerText = json;
+
+            let obj = JSON.parse(json);
+            other(obj);
+            
+        }
+
+        function other(x) {
+            alert(x.first);
+        }
+// ]]>
+    </script>
+</head>
+<body>
+    First Name: <input id="Text1" type="text" />
+    <p>
+        &nbsp;</p>
+    Last Name:&nbsp;
+    <input id="Text2" type="text" />&nbsp;&nbsp;
+    <input id="Button1" type="button" value="Stringify"  onclick="return Button1_onclick()" />
+    <br /><br /><div id="results"></div>
+</body>
+</html>

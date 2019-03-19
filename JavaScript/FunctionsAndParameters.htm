@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+        function display(first, second) {
+            result.innerHTML = "first:" + first +
+                "<br/> second: " + second +
+                "<br/> arguments.length: " + arguments.length +
+                "<br/> arguments[0]: " + arguments[0] +
+                "<br/> arguments[1]: " + arguments[1] +
+                "<br/> arguments[2]: " + arguments[2];
+        }
+ // ]]>
+    </script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 420px;
+            height: 163px;
+        }
+    </style>
+</head>
+<body>
+    <img alt="" class="auto-style1" src="Capture.JPG" style="border-style: solid" /><br />
+    <br />
+    <input id="Button1" type="button" value="display(1);"  onclick="display(1);" />
+    <input id="Button2" type="button" value="display(1,2);"  onclick="display(1,2);" />
+    <input id="Button3" type="button" value="display(1,2,3);"  onclick="display(1, 2, 3);" />
+
+    <div id="result">
+
+    </div>
+    <p>
+        &nbsp;</p>
+</body>
+</html>

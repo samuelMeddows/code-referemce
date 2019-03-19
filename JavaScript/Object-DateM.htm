@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+        function Button1_onclick() {
+            let dateString = "Today's date is: <hr/>";
+
+            let newDate = new Date();
+
+            // Get the month, day, and year.
+            dateString += newDate.getDate() + "/";
+            dateString += (newDate.getMonth() + 1) + "/";
+            dateString += newDate.getFullYear();
+
+            document.write(dateString + "<br/>");
+            document.write(newDate.toDateString() + "<br/>");
+            document.write(newDate.toLocaleString() + "<br/>");
+
+        }
+// ]]>
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="Press this"  onclick="return Button1_onclick()" />
+</body>
+</html>

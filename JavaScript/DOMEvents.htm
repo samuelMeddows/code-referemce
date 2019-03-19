@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+        function Dimmer() {
+            window.event.srcElement.className = "dim";
+        }
+
+        function Brighter() {
+            window.event.srcElement.className = "bright";
+        }
+    </script>
+    
+    <style type="text/css">
+        img {
+            width: 249px;
+            height: 199px;
+        }
+        .dim {
+            opacity:0.3;
+        }
+        .bright {
+            opacity:1.0;
+        }
+    </style>
+</head>
+<body>
+
+        <img id="A" alt="" class="dim"  src="S1.jpg"  />
+        <img id="B" alt="" class="dim"  src="S2.jpg" />
+        <img id="C" alt="" class="dim"  src="S3.jpg" />
+        <img id="D" alt="" class="dim"   src="S4.jpg" />
+        <img  id="E"alt="" class="dim"  src="S5.jpg" />
+
+        <script language="javascript" type="text/javascript">
+              //Add script here so that the browser has had time to load all the DOM Documents
+            let allImages = document.getElementsByTagName("img");
+            for (let i = 0; i < allImages.length; i++) {
+                    document.getElementById(allImages[i].id).addEventListener("mouseover", Brighter, false);
+                    document.getElementById(allImages[i].id).addEventListener("mouseout", Dimmer, false);
+
+                }
+        </script>
+</body>
+</html>

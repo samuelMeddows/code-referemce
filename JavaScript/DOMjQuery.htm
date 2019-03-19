@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script  type="text/javascript" src="../../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("img").mouseover(function () {
+                $(this).attr("class","bright");
+            });
+            $("img").mouseout(function () {
+                $(this).attr("class", "dim");
+            });
+        });
+    </script>
+
+    
+    <style type="text/css">
+        img {
+            width: 249px;
+            height: 199px;
+        }
+        .dim {
+            opacity:0.3;
+        }
+        .bright {
+            opacity:1.0;
+        }
+    </style>
+</head>
+<body>
+        <img id="A" alt="" class="dim"  src="S1.jpg"  />
+        <img id="B" alt="" class="dim"  src="S2.jpg" />
+        <img id="C" alt="" class="dim"  src="S3.jpg" />
+        <img id="D" alt="" class="dim"  src="S4.jpg" />
+        <img id="E" alt="" class="dim"  src="S5.jpg" />
+</body>
+</html>

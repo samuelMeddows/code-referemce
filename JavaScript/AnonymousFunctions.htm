@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+        function Button1_onclick() {
+            let x = function (x, y) {
+                return x * y + y;
+            }
+
+            alert(x(3, 4));
+            alert(x(5,9));
+
+        }
+// ]]>
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="Press this"  onclick="return Button1_onclick()" />
+</body>
+</html>

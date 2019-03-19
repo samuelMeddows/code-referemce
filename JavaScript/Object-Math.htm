@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+        function Button1_onclick() {
+            let x = Text1.value;
+            let y = Text2.value;
+
+            if (isNaN(x) || isNaN(y))
+                results.innerText = "Please type numbers!";
+            else
+                results.innerText = Math.pow(x, y);
+
+        }
+// ]]>
+    </script>
+</head>
+<body>
+    number: <input id="Text1" type="text" /> to the power of&nbsp;
+    <input id="Text2" type="text" />&nbsp;&nbsp;
+    <input id="Button1" type="button" value="Calculate"  onclick="return Button1_onclick()" />
+    <div id="results"></div>
+</body>
+</html>

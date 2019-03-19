@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+        // <![CDATA[
+        var itm=0
+        function Button1_onclick() {
+            for (let i = 0; i < 10; i++, itm++) {
+                let li = document.createElement("li");
+                li.id = "L" + itm;
+                li.innerText = "list item " + itm + "    ";
+                let btn = document.createElement("input");
+                btn.setAttribute("type", "button");
+                btn.setAttribute("value", "remove " + itm);
+                btn.setAttribute("onclick", "rmvListItem('L" + itm + "');");
+                li.appendChild(btn);
+                list.appendChild(li);
+            }
+        }
+        function rmvListItem(id) {
+            let element = document.getElementById(id);
+            element.parentElement.removeChild(element);
+
+        }
+// ]]>
+    </script>
+</head>
+<body>
+   
+    <input id="Button1" type="button" value="Add Elements"  onclick="Button1_onclick()" />
+    <br /><br /> 
+    <ul id="list">
+
+    </ul>
+</body>
+</html>
