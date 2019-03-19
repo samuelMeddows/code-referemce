@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/Factory.js"></script>
+    <script language="javascript" type="text/javascript">
+
+
+        function Button1_onclick() {
+            var c = new Car();
+            alert("Car Price=" + c.Price);
+
+			//The idea of the pattern they use in the labs results in being able to declare something
+			//that looks like a C# class. If you changed 'Object.Inherit' to 'class' (in concept), that kind of idea....
+            var boat = Object.inherit(
+                {
+                    initialize: function (colour) {
+                        this.colour = colour;
+                        this.speed = 0;
+                    },
+
+                    increaseSpeed: function (amount) {
+                        this.speed += amount;
+                    },
+
+                    speed: this.speed,
+                    colour: this.colour
+
+                });
+
+            boat.initialize("red");
+            boat.increaseSpeed(20);
+
+
+            alert("boat colour:" + boat.colour + " boat speed:" + boat.speed);
+        }
+
+        function Car() {
+            this.Price = 100;
+            this.Weight = 4000;
+        }
+
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="button"  onclick="return Button1_onclick()" />
+</body>
+</html>

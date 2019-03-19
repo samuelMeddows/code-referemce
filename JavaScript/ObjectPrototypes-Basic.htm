@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+
+        function Button1_onclick() {
+            var C1 = new Car(10);
+            var C2 = new Car(20);
+
+
+            //Step 1. Uncomment this. Waht will the result be?
+            //C1.Fast = function () {
+            //    this.Speed += 400;
+            //}
+
+
+            // Step 2. Comment out step 1 then uncomment this
+            //Additionally, comment out the Fast property in the Car Constructor
+            //What will the result be?
+            //Car.prototype.Fast = function () {
+            //    this.Speed += 500;
+            //}
+
+            
+
+            C1.Fast();
+            C2.Fast();
+
+            alert(C1.Speed);
+            alert(C2.Speed);
+        }
+
+        function Car(I) {
+            this.Speed = I;
+            this.Fast = function () {   
+                this.Speed += 200;
+            }
+        }
+     
+
+            
+            
+
+
+// ]]>
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="button"  onclick="return Button1_onclick()" />
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnAwait").click(function () {
+                function resolveAfter2Seconds(x) {
+                    return new Promise(resolve => {
+                        setTimeout(() => {
+                            resolve(x);
+                        }, 2000);
+                    });
+                }
+
+                async function f1() {
+                    var x = await resolveAfter2Seconds(10);
+                    alert(x); // 10
+                }
+                f1();
+            });
+        });
+
+     </script>
+</head>
+<body>
+
+
+    <p>
+        <input id="btnAwait" type="button" value=" Basic Await function" /><br />
+        
+    </p>
+
+
+    <span id="spn"></span>
+
+
+
+
+</body>
+</html>

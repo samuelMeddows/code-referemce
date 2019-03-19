@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Button1").click(function () {
+
+                fetch('data/TextFile3.txt')
+                    .then(function (response) {
+                        response.text().then((r) => {
+                            $("#spn").html(r);
+                        });
+                    });
+                  
+            });
+        });
+       
+     </script>
+</head>
+<body>
+    <p>
+        <input id="Button1" type="button" value="button" /></p>
+        <span id="spn"></span>
+</body>
+</html>

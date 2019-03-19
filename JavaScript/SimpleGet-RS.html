@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Button1").click(function () {
+
+                var request = new XMLHttpRequest();
+                var url = "data/TextFile.txt";
+                request.open("GET", url, false); //synchronous call
+                request.send();
+
+                if (request.status != 200) {
+                    alert("Oops Http request failed. " + request.status);
+                }
+                else {
+                    $("#spn").html(request.responseText);
+                }
+
+            });
+
+          
+
+        });
+       
+     </script>
+</head>
+<body>
+
+
+    <p>
+        <input id="Button1" type="button" value="button" /></p>
+
+
+       <span id="spn"></span>
+
+
+    
+
+</body>
+</html>

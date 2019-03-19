@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+
+        'use strict';
+        function Button1_onclick() {
+            //eg1
+            let p = new Polygon(300, 400);
+            p.sayName();
+            alert('The width of this polygon is ' + p.width);
+
+            //eg2
+            const MyPoly = class Poly {
+                getPolyName() {
+                    return 'Hi. I was created with a Class expression. My name is ' +
+                        Poly.name;
+                }
+            };
+
+            let inst = new MyPoly();
+            inst.getPolyName();
+
+            //eg3
+            let s = new Square(5);
+            s.sayName();
+            alert('The area of this square is ' + s.area);
+
+
+            //eg4
+            let r = new Rectangle(50, 60);
+            r.sayName();
+
+        }
+
+
+
+        
+        class Polygon {
+            constructor(height, width) {
+                this.name = 'Polygon';
+                this.height = height;
+                this.width = width;
+            }
+
+            sayName() {
+                alert('Hi, I am a ' + this.name + '.');
+            }
+
+            sayHistory() {
+                alert('"Polygon" is derived from the Greek polus (many) ' +
+                    'and gonia (angle).');
+            }
+        }
+
+
+        class Square extends Polygon {
+            constructor(length) {
+                super(length, length);
+                this.name = 'Square';
+            }
+
+
+            get area() {
+                return this.height * this.width;
+            }
+
+            set area(value) {
+                this.area = value;
+            }
+        }
+
+        
+
+        class Rectangle extends Polygon {
+            constructor(height, width) {
+                super(height, width);
+                this.name = 'Rectangle';
+            }
+            // Here, sayName() is a subclassed method which
+            // overrides their superclass method of the same name.
+            sayName() {
+                alert('Super! My name is ' + this.name + '.');
+                super.sayHistory();
+            }
+        }
+
+     
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="button"  onclick="return Button1_onclick()" />
+</body>
+</html>

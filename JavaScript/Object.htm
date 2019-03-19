@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+
+        function Button1_onclick() {
+            var C1 = CreateCar();
+            C1.Go();
+            alert(C1.Speed);
+        }
+
+        function CreateCar() {
+            var Car = {} // or var Car = new Object();
+            Car.Speed = 0;
+            Car.Go = function () {
+                this.Speed = 100;
+            }
+            return Car;
+        }
+            
+            
+
+
+// ]]>
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="button"  onclick="return Button1_onclick()" />
+</body>
+</html>

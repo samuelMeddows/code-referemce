@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Button1").click(function () {
+
+                var args = {};
+                args.value1 = $("#Text1")[0].value;
+                args.value2 = $("#Text2")[0].value;;
+
+
+                $.ajax({
+                    url: "../../../SLong.ashx",
+                    type: "POST",
+                    timeout: 12000,
+                    datatype: "json",
+                    data: JSON.stringify(args),
+                    success: function (result, status, x) {
+                        $("#spn").text("the multiplication of " + result.value1 + " and " + result.value2 + " is " + result.result);
+                        $("#Button1").removeAttr("disabled");
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert(errorThrown);
+                        $("#Button1").removeAttr("disabled");
+                    },
+                    beforeSend: function (jqXHR, textStatus) {
+                         $("#Button1").attr("disabled", "disabled");
+                    }
+                });
+            });
+        });
+       
+     </script>
+</head>
+<body>
+
+
+    <p>
+        Number:<input id="Text1" type="text" /></p>
+    <p>
+        Number:<input id="Text2" type="text" /></p>
+    <p>
+        <input id="Button1"  type="button" value="Multiply" /></p>
+   <div>
+       <h1>
+       <span id="spn"></span>
+       </h1>
+   </div>
+
+
+</body>
+</html>

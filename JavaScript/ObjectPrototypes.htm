@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+
+        function Button1_onclick() {
+
+            //THIS CODE DOES NOT USE PROTOTYPES.
+            //EACH INSTANCE OFAN ACCOUNT OBJECT KEEPS ITS OWN COPIES OF METHODS IN MEMORY.
+            var Account = function (id, name) {
+                this.id = id;
+                this.name = name;
+                this.balance = 0;
+                this.numTransactions = 0;
+                totalTransactions = 0;
+                
+                this.deposit= function (amount) {
+                    this.balance += amount;
+                    this.numTransactions++;
+                    totalTransactions++;
+                };
+                this.withdraw= function (amount) {
+                    this.balance -= amount;
+                    this.numTransactions++;
+                    totalTransactions++;
+                };
+                this.displayDetails= function () {
+                    alert(this.id + ", " +
+                    this.name + " balance $" +
+                    this.balance + " (" +
+                    this.numTransactions + " transactions on this account, " + totalTransactions + " on all accounts )");
+                };
+            };
+
+           
+
+
+            a1 = new Account(1, 'Zoe');
+            a1.deposit(100);
+            a1.withdraw(20);
+            a1.displayDetails();
+
+            a1 = new Account(2, 'kiri');
+            a1.deposit(200);
+            a1.withdraw(10);
+            a1.displayDetails();
+          
+        }
+
+        function Button2_onclick() {
+            //THIS CODE DOES USE PROTOTYPES.
+            //EACH INSTANCE OF AN ACCOUNT OBJECT SHARES COPIES OF METHODS IN MEMORY.
+            //It also implements the idea of a 'static variable'
+            var Account = function (id, name) {
+                this.id = id;
+                this.name = name;
+                this.balance = 0;
+                this.numTransactions = 0;
+            };
+           
+            Account.prototype = {
+                deposit: function (amount) {
+                    this.balance += amount;
+                    this.numTransactions++;
+                    Account.prototype.totalTransactions++;
+                },
+                withdraw: function (amount) {
+                    this.balance -= amount;
+                    this.numTransactions++;
+                    Account.prototype.totalTransactions++;
+                },
+                displayDetails: function () {
+                    alert(this.id + ", " +
+                    this.name + " balance $" +
+                    this.balance + " (" +
+                    this.numTransactions + " transactions on this account, " + Account.prototype.totalTransactions + " on all accounts )");
+                }
+
+            };
+            Account.prototype.totalTransactions = 0;
+
+            a1 = new Account(1,'Zoe');
+            a1.deposit(100);
+            a1.withdraw(20);
+            a1.displayDetails();
+
+            a1 = new Account(2, 'kiri');
+            a1.deposit(200);
+            a1.withdraw(10);
+            a1.displayDetails();
+        }
+
+            
+            
+
+
+// ]]>
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="button"  onclick="return Button1_onclick()" />
+
+    <input id="Button2" type="button" value="button"  onclick="return Button2_onclick()" />
+</body>
+</html>

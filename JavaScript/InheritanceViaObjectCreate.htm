@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+
+        
+
+        function Button1_onclick() {
+            var C1 = new Car(10);
+            Car.prototype.GoFaster = function () {
+                this.Speed += 200;
+            }
+
+
+            Veyron.prototype = Object.create(new Car(17),
+                {
+                    Colour: { value: "Red", writable: true }, //read,write
+                    PlaceOfManufacture: { value: "Italy" },    //read only
+                    GoVeryMuchFaster: {
+                        value: function () {
+                            this.Speed += 400;
+                        }
+                    }
+                });
+
+
+            Vy = new Veyron();
+            Vy.GoFaster();
+            Vy.GoVeryMuchFaster();
+            Vy.Colour = "Black";
+            alert("Speed=" + Vy.Speed + ", Colour=" + Vy.Colour + ", PlaceOfManufacture=" + Vy.PlaceOfManufacture);
+        }
+
+        function Car(I) {
+            this.Speed = I;
+        }
+
+        function Veyron() {
+
+        }
+
+      
+            
+
+
+// ]]>
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="button"  onclick="return Button1_onclick()" />
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+         function sendRequest(url,args) {
+            let request = new XMLHttpRequest();
+            let getRemoteStuff = new Promise((resolve, reject) => {
+
+
+                request.onload = () => {
+                    if (request.status === 200) {
+                        resolve(request.response);
+                        $("#Button1").removeAttr("disabled");
+                    }
+                    else {
+                        reject(Error(request.statusText));
+                    }
+                };
+
+                // Handle network errors
+                request.onerror = () => {
+                    reject(Error("Network error occurred"));
+                };
+
+                request.open("POST", url);
+                request.send(JSON.stringify(args));
+            });
+            return getRemoteStuff;
+        }
+
+        $(document).ready(function () {
+            
+
+            $("#Button1").click( async function () {
+                $("#Button1").attr("disabled", "disabled");
+                var args = {};
+                args.value1 = $("#Text1")[0].value;
+                args.value2 = $("#Text2")[0].value;;
+
+                let data = await sendRequest("../../../SLong.ashx", args)
+
+                var result = JSON.parse(data);
+                $("#spn").text("the multiplication of " + result.value1 + " and " + result.value2 + " is " + result.result);
+            });
+        });
+       
+     </script>
+</head>
+<body>
+
+
+    <p>
+        Number:<input id="Text1" type="text" /></p>
+    <p>
+        Number:<input id="Text2" type="text" /></p>
+    <p>
+        <input id="Button1" type="button" value="Multiply" /></p>
+   <div>
+       <h1>
+       <span id="spn"></span>
+       </h1>
+   </div>
+
+
+</body>
+</html>

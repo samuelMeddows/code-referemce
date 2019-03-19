@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Button1").click(function () {
+                //$.get("TextFile.txt", "", function (result) {
+                //    $("#spn").html(result);
+                //}).error(function () { alert("didn't work"); });
+
+                //or this:
+                $("#spn").load("data/TextFile3.txt").error(function () { alert("didn't work"); });
+            });
+        });
+       
+     </script>
+</head>
+<body>
+
+
+    <p>
+        <input id="Button1" type="button" value="button" /></p>
+
+
+       <span id="spn"></span>
+
+
+    
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="../../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnAnon").click(function () {
+                //example starts here
+                const f = function (x, y) {
+                    let z = x + y;
+                    alert("example1, " + x + "+" + y + "=" + z);
+                };
+
+                f(3, 4);
+                //example ends here
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btnArrow1").click(function () {
+
+                //example starts here
+                const f = (x, y) => {
+                    let z = x + y;
+                    alert("example2, " + x + "+" + y + "=" + z);
+                };
+
+                f(3, 4);
+                //example ends here
+
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btnArrow2").click(function () {
+
+                //example starts here
+                const f = (x, y) => alert("example3, " + x + "+" + y + "=" + (x + y));
+
+                f(3, 4);
+                //example ends here
+
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btnArrow3").click(function () {
+
+                //example starts here (it has a bug, but I don't know what it is?)
+                let f = () => alert("example4, " + arguments[0].toString() + "+" + arguments[1].toString() + "=" + (arguments[0] + arguments[1]).toString());
+
+                f(3, 4);
+                //example ends here
+
+
+            });
+        });
+     </script>
+</head>
+<body>
+
+
+    <p>
+        <input id="btnAnon" type="button" value="(Example1) Simple Anonymous Function" /><br />
+        <input id="btnArrow1" type="button" value="(Example2) Arrow function" /><br />
+        <input id="btnArrow2" type="button" value="(Example3) Arrow function" /><br />
+        <input id="btnArrow3" type="button" value="(Example4) Arrow function" /><br />
+    </p>
+
+
+    <span id="spn"></span>
+
+
+
+
+</body>
+</html>

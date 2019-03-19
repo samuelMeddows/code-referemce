@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+
+            $("#Button1").click(function () {
+
+                $("#Button1").attr("disabled", "disabled");
+                var args = {};
+                args.value1 = $("#Text1")[0].value;
+                args.value2 = $("#Text2")[0].value;;
+
+               
+
+                let request = new XMLHttpRequest();
+                let getRemoteStuff = (url) => new Promise((resolve, reject) => {
+                    
+
+                    request.onload = () => {
+                        if (request.status === 200) {
+                            resolve(request.response);
+                            $("#Button1").removeAttr("disabled");
+                        }
+                        else {
+                            reject(Error(request.statusText));
+                        }
+                    };
+
+                    // Handle network errors
+                    request.onerror = () => {
+                        reject(Error("Network error occurred"));
+                    };
+
+                    request.open("POST", url);
+                    request.send(JSON.stringify(args));
+                });
+
+                getRemoteStuff("../../../SLong.ashx")
+                    .then(data => {
+                        var type = request.getResponseHeader("Content-Type");
+                        switch (type) {
+                            case "text/plain; charset=utf-8":
+                                $("#spn").text(request.responseText);
+                                break;
+                            case "text/json; charset=utf-8":
+                                {
+                                    var result = JSON.parse(data);
+                                    $("#spn").text("the multiplication of " + result.value1 + " and " + result.value2 + " is " + result.result);
+                                }
+                                break;
+                            default:
+                                $("#spn").text("whatever came back wasn't expected");
+                        }
+                    })
+                    .catch(error => $("#spn").text("failed! " + error));
+               
+
+            });
+
+
+        });
+       
+     </script>
+</head>
+<body>
+
+
+    <p>
+        Number:<input id="Text1" type="text" /></p>
+    <p>
+        Number:<input id="Text2" type="text" /></p>
+    <p>
+        <input id="Button1" type="button" value="Multiply" /></p>
+   <div>
+       <h1>
+       <span id="spn"></span>
+       </h1>
+   </div>
+
+
+</body>
+</html>

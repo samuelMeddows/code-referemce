@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script  type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnPromise").click(function () {
+                let myFirstPromise = new Promise((resolve, reject) => {
+                   
+                    setTimeout(function () {
+                        resolve("Perfect"); 
+                    }, 250);
+                });
+
+                myFirstPromise.then((r) => {
+                    alert("The result was:  " + r);
+                });
+            });
+        });
+
+     </script>
+</head>
+<body>
+
+
+    <p>
+        <input id="btnPromise" type="button" value=" Basic Promise function" /><br />
+        
+    </p>
+
+
+    <span id="spn"></span>
+
+
+
+
+</body>
+</html>
