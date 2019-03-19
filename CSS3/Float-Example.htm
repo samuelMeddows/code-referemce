@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Playit</title>
+	<script type="text/javascript">
+	<!--
+	function playit_onload()
+	{
+	var preval=""
+	preval=document.getElementById("preselectedValue").value
+	if (preval!="")
+		{
+		change_position(preval)
+		var x=document.getElementsByTagName("input")
+		var l=x.length
+		for (i=0;i<l;i++)
+			{
+			if (x[i].value==preval)
+				{
+				x[i].checked=true
+				}
+			}
+			document.getElementById("playitcontainer").style.display="block";
+			}
+	}
+	
+	function click_position(obj)
+	{
+	change_position(obj.value)
+
+	}
+	
+	function change_position(val)
+	{
+	
+	var s="demoDIV"
+	
+	s="myDIV"
+		
+	document.getElementById(s).style.cssFloat=val;
+		
+	var x="float:<span id='enlargecssprop'>" + val + "</span>"
+	var y="div#myDIV<br />	{<br />	width:100px;<br />	background-color:red;<br />	###CSSPROP###;<br />	}<br />"
+	var z=y.replace("###CSSPROP###",x)
+	
+		document.getElementById("styleDIV").innerHTML=z
+	
+	}
+	
+	
+	//-->
+	</script>
+	<style type="text/css"> 
+	body
+	{
+	font-family:verdana;
+	font-size:12px;
+	}
+	
+	#playitcontainer
+	{
+	width:960px;
+	background-color:#e5eecc;
+	border:1px solid #98bf21;
+	margin:auto;
+	display:none;
+	}
+	
+	#enlargecssprop
+	{
+	font-weight:bold;
+	font-size:14px;
+	color:#000000;
+	}
+	
+	#demoDIV
+	{
+	margin-left:10px;
+	margin-top:3px;
+	background-color:#ffffff;
+	border:1px solid #c3c3c3;
+	height:280px;
+	width:430px;
+	
+	}
+	
+	div#myDIV
+	{
+	width:100px;
+	background-color:red;
+	float:none;
+	}	
+	
+	#styleDIV
+	{
+	font-family:courier new;
+	margin-left:10px;
+	background-color:#f1f1f1;
+	border:1px solid #c3c3c3;
+	width:424px;
+	padding:3px;
+	color:#222222;
+	}
+	
+	div.demoHeader
+	{
+	font-size:14px;
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:2px;
+	color:#617f10;
+	}
+	
+	div.playitFooter
+	{
+	font-size:13px;
+	color:#617f10;
+	padding:10px;
+	}
+	
+	#footer
+	{
+	margin:15px;
+	}
+	
+	
+	</style>
+	</head>
+	<body onload="playit_onload()">
+	<div style="text-align:center">
+	
+	</div>
+	
+	<div id="playitcontainer">
+	
+		<div style="width:130px;float:left;">
+				<div class="demoHeader">CSS Property:</div>
+				<div style="font-size:14px;margin:10px;font-weight:bold;">float:</div>				
+				
+				<form style="margin:15px;" action="javascript:return false;">
+					<input type="hidden" id="preselectedValue" value="left" />
+					
+					<div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_1" value="none" /><label for="value_1">none</label></div>
+					
+					<div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_2" value="left" /><label for="value_2">left</label></div>
+					
+					<div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_3" value="right" /><label for="value_3">right</label></div>
+								
+				</form>
+				<div id="footer"></div>
+		</div>
+		<div style="width:450px;float:left;">
+			<div class="demoHeader">Result:</div>
+	
+			<div id="demoParent">
+				<div id="demoDIV"><div>
+	<span>A span element.</span>
+	<div id="myDIV">myDIV.</div>
+	<span>Another span element.</span>
+</div></div>
+			</div>
+			<div class="demoHeader">CSS Code:</div>
+			<div id="styleDIV">
+			div#myDIV<br />	{<br />	width:100px;<br />	background-color:red;<br />	float:<span id='enlargecssprop'>none</span>;<br />	}<br />
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+</html>

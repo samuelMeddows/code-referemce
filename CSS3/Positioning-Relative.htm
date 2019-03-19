@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Example C</title>
+	<style>
+		.box { position: relative; width: 200px; height: 200px;}
+		#box_1 { background: red; }
+		#box_2 { background: blue; left: 150px; }
+		#box_3 { background: aqua; }
+        #box_4 { background: black; width: 60px; height: 60px; top:50px; left: 30px;}
+	</style>
+</head>
+<body>
+    <p>The element is positioned relative to its position in the normal flow, think of it as an offset</p>
+    <div id="box_1" class="box"></div>
+    <div id="box_2" class="box"></div>
+    <div id="box_3" class="box">
+        <div id="box_4" class="box" />
+    </div>
+
+</body>
+</html>
