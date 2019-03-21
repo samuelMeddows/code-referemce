@@ -1,0 +1,29 @@
+# Inheritence
+
+```javascript
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body {
+            	font-family:'Bookman Old Style' !important;
+            }
+            p {
+            	font-family:Arial;
+            	color:red !important; /* What difference does !important make?*/
+            }
+            #xyz {
+            	color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Text in a Heading 1 tag</h1>
+        <p id="xyz">Text in a paragraph</p>
+        <p>Text in a paragraph</p>
+    </body>
+</html>
+```
+
+
+
