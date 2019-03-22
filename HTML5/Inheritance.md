@@ -1,4 +1,6 @@
-# Inheritence
+# Inheritance
+
+### Code
 
 ```javascript
 <!DOCTYPE html>
@@ -25,5 +27,8 @@
 </html>
 ```
 
+### Example
+
+![Example](/screenshots/Inheritance1.PNG)
 
 

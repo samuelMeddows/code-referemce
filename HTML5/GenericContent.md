@@ -1,5 +1,7 @@
 # Generic Content
 
+### Code
+
 ```javascript
 <!DOCTYPE html>
 <html>
@@ -15,6 +17,11 @@
 	</body>
 </html>
 ```
+
+### Example
+
+![Example](/screenshots/GenericContent1.PNG)
+
 
 
 
