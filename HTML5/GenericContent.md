@@ -1,6 +1,6 @@
-# Generic Content
+# HTML5 Generic Content
 
-### Code
+### HTML5 Code
 
 
 ```javascript
