@@ -20,7 +20,7 @@
 
 ### Example
 
-![Example](/screenshots/GenericContent1.PNG)
+![Example](https://github.com/samuelMeddows/code-reference/blob/master/HTML5/screenshots/GenericContent1.PNG)
 
 
 
