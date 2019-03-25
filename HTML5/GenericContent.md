@@ -1,4 +1,4 @@
-[Code-Refernces ](https://samuelmeddows.github.io/code-reference/HTML5/") >
+[Code-Refernces ](https://samuelmeddows.github.io/code-reference/") >
 [ Generic Content](https://samuelmeddows.github.io/code-reference/HTML5/GenericContent "Generic Content")
 # HTML5 Generic Content
 
