@@ -22,6 +22,7 @@
 ### Example
 
 ![Example](https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/GenericContent1.PNG)
+<img src="https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/GenericContent1.PNG" alt="Example">
 
 ### Live Example
 [Generic Content Example](https://html5-css-javascript-examples.azurewebsites.net/HTML5/GenericContent.html "Generic Content Example")
