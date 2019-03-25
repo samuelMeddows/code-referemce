@@ -7,9 +7,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <style type="text/css">
-        a:after {content: " (" attr(href) ")";}
-        </style>
+        	<style type="text/css">
+        		a:after {content: " (" attr(href) ")";}
+        	</style>
 	</head>
 
 	<body>
@@ -24,7 +24,7 @@
 ### Example
 
 
-<img src="https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/GenericContent1.PNG" alt="Example">
+<img src="HTML5/screenshots/GenericContent1.PNG" alt="Example">
 
 ### Live Example
 [Generic Content Example](https://html5-css-javascript-examples.azurewebsites.net/HTML5/GenericContent.html "Generic Content Example")
