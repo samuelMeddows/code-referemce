@@ -1,6 +1,6 @@
-# Inheritance
+# HTML5 Inheritance
 
-### Code
+### HTML5 Code
 
 ```javascript
 <!DOCTYPE html>
@@ -29,6 +29,7 @@
 
 ### Example
 
-![Example](/screenshots/Inheritance1.PNG)
+<img src="https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/Inheritance1.PNG" />
 
-
+### Live Example
+<a href="https://html5-css-javascript-examples.azurewebsites.net/HTML5/Inheritance.html">Inheritance Example</a>
