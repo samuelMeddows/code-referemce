@@ -12,15 +12,12 @@
             }
             p {
             	font-family:Arial;
-            	color:red !important;
+            	color:red !important; /* What difference does !important make?*/
             }
             #xyz {
             	color:green;
             }
-             h1 {
-            	font-family:Arial;
-            	color:red !important;
-            }
+
         </style>
     </head>
     <body>
