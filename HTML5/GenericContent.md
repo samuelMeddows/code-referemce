@@ -24,7 +24,7 @@
 ### Example
 
 
-<img src="HTML5/screenshots/GenericContent1.PNG" alt="Example">
+<img src="screenshots/GenericContent1.PNG" alt="Example">
 
 ### Live Example
 [Generic Content Example](https://html5-css-javascript-examples.azurewebsites.net/HTML5/GenericContent.html "Generic Content Example")
