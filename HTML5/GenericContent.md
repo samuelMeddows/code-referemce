@@ -1,6 +1,7 @@
 # Generic Content
 
 ### Code
+<script src="https://gist.github.com/samuelMeddows/1868556d3da7fc15fa1d967aa72bb277.js"></script>
 
 ```javascript
 <!DOCTYPE html>
