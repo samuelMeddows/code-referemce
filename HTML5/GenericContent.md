@@ -21,7 +21,7 @@
 
 ### Example
 
-![Example](https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/GenericContent1.PNG)
+
 <img src="https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/GenericContent1.PNG" alt="Example">
 
 ### Live Example
