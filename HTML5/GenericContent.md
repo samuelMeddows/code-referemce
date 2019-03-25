@@ -3,7 +3,7 @@
 ### HTML5 Code
 
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,7 +19,7 @@
 </html>
 ```
 
-<script src="https://gist.github.com/samuelMeddows/1868556d3da7fc15fa1d967aa72bb277.js"></script>
+
 
 ### Example
 
