@@ -12,7 +12,7 @@
             }
             p {
             	font-family:Arial;
-            	color:red !important; /* What difference does !important make?*/
+            	color:red !important;
             }
             #xyz {
             	color:green;
