@@ -21,7 +21,7 @@
 
 ### Example
 
-![Example](https://github.com/samuelMeddows/code-reference/blob/master/HTML5/screenshots/GenericContent1.PNG)
+![Example](https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/GenericContent1.PNG)
 
 ### Live Example
 [Generic Content Example](https://html5-css-javascript-examples.azurewebsites.net/HTML5/GenericContent.html "Generic Content Example")
