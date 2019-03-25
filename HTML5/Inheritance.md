@@ -1,5 +1,5 @@
 [Code-Refernces ](https://samuelmeddows.github.io/code-reference/ "Code-Refernces") >
-[ Inhertitance](https://samuelmeddows.github.io/code-reference/HTML5/Inhertitance "Inhertitance")
+[ Inhertitance](https://samuelmeddows.github.io/code-reference/HTML5/Inheritance "Inhertitance")
 # HTML5 Inheritance
 
 ### HTML5 Code
