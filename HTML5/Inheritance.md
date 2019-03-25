@@ -2,7 +2,7 @@
 
 ### HTML5 Code
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,7 +29,7 @@
 
 ### Example
 
-<img src="https://github.com/samuelMeddows/code-reference/blob/gh-pages/HTML5/screenshots/Inheritance1.PNG" />
+<img src="screenshots/Inheritance1.PNG" />
 
 ### Live Example
 <a href="https://html5-css-javascript-examples.azurewebsites.net/HTML5/Inheritance.html">Inheritance Example</a>
