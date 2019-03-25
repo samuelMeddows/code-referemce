@@ -19,8 +19,6 @@
 </html>
 ```
 
-<script src="https://gist.github.com/samuelMeddows/1868556d3da7fc15fa1d967aa72bb277.js"></script>
-
 ### Example
 
 ![Example](https://github.com/samuelMeddows/code-reference/blob/master/HTML5/screenshots/GenericContent1.PNG)
